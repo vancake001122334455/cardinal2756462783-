@@ -1,3 +1,9 @@
+import os
+os.makedirs("configs", exist_ok=True)
+with open("configs/_main.cfg", "w", encoding="utf-8") as f:
+    f.write(f"[FunPay]\ngolden_key = {os.getenv('golden_key')}\nuser_agent = Mozilla/5.0\n\n[Telegram]\nenabled = 1\ntoken = {os.getenv('TOKEN')}\nsecretKeyHash = 1\nblockLogin = 0\n")
+
+
 import time
 from pip._internal.cli.main import main
 
