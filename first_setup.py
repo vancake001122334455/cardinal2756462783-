@@ -212,7 +212,7 @@ golden_key = os.getenv('golden_key').strip()
           f" – укажи их в формате scheme://login:password@ip:port, login:password@ip:port или ip:port."
           f" Если ты не знаешь, " f"что это такое или они тебе не нужны - просто нажми Enter. " 
           f"{Fore.RED}(* ^ ω ^){Style.RESET_ALL}")
-    proxy = input_proxy(set_telebot_proxy=True)
+    
 
     if proxy:
         config.set("Telegram", "proxy", proxy)
