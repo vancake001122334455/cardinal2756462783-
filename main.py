@@ -1,16 +1,4 @@
-import os
-os.makedirs("configs", exist_ok=True)
-with open("configs/_main.cfg", "w", encoding="utf-8") as f:
-    f.write(f"""[FunPay]
-golden_key = {os.getenv('golden_key')}
-user_agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
-[Telegram]
-enabled = 1
-token = {os.getenv('TOKEN')}
-secretKeyHash = 1
-blockLogin = 0
-""")
 
 
 import time
