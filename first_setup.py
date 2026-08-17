@@ -185,7 +185,9 @@ def first_setup():
     while True:
         print(f"\n{Fore.MAGENTA}{Style.BRIGHT}┌── {Fore.CYAN}"
               f"Для начала введи токен (golden_key) твоего FunPay аккаунта (посмотреть его можно в расширении EditThisCookie) {Fore.RED}(._.){Style.RESET_ALL}")
-        golden_key = input(f"{Fore.MAGENTA}{Style.BRIGHT}└───> {Style.RESET_ALL}").strip()
+        import os
+golden_key = os.getenv('golden_key').strip()
+
         if len(golden_key) != 32:
             print(
                 f"\n{Fore.CYAN}{Style.BRIGHT}Неверный формат токена. Попробуй еще раз! {Fore.RED}\(!!˚0˚)/{Style.RESET_ALL}")
